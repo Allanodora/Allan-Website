@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Allan Odora builds simple AI automation, data, and web systems for small businesses, creators, and teams." />
-  <title>Allan Odora Systems | AI, Data & Web Tools</title>
+  <meta name="description" content="Allan Odora builds AI automation, data pipelines, dashboards, and web systems for businesses, creators, and teams." />
+  <title>Allan Odora Systems | AI, Data & Web Solutions</title>
   <style>
     :root {
       --cream: #fbf3e4;
@@ -233,6 +233,7 @@
 
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
     .card {
       background: rgba(255, 253, 248, 0.78);
@@ -296,6 +297,57 @@
     .about-box p { color: rgba(251, 243, 228, 0.82); margin-top: 10px; }
     .about-box .tag { background: rgba(255,255,255,0.14); color: var(--cream); border-color: rgba(255,255,255,0.16); }
 
+    .resume-card {
+      background: rgba(255, 253, 248, 0.82);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 10px 28px rgba(79, 55, 34, 0.08);
+    }
+
+    .resume-card h3 { margin-bottom: 6px; letter-spacing: -0.03em; }
+    .resume-card .meta { color: var(--moss); font-weight: 900; font-size: 0.9rem; margin-bottom: 8px; }
+    .resume-card p { color: var(--muted); }
+
+    .podcast-box {
+      background: linear-gradient(135deg, rgba(201, 123, 84, 0.18), rgba(155, 215, 209, 0.3));
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 34px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 22px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .podcast-mark {
+      min-height: 230px;
+      border-radius: 28px;
+      background: var(--ink);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .podcast-mark:before, .podcast-mark:after {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 1px dashed rgba(251,243,228,0.26);
+    }
+
+    .podcast-mark:before { top: -52px; left: -44px; }
+    .podcast-mark:after { bottom: -54px; right: -44px; }
+    .podcast-mark strong { font-size: 2rem; line-height: 1; letter-spacing: -0.05em; z-index: 1; }
+    .podcast-box p { color: var(--muted); }
+
     .contact {
       background: var(--white);
       border: 1px solid rgba(255,255,255,0.9);
@@ -322,7 +374,7 @@
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
     @media (max-width: 900px) {
-      .hero-grid, .grid-3, .grid-4, .about-box, .contact { grid-template-columns: 1fr; }
+      .hero-grid, .grid-3, .grid-4, .grid-2, .about-box, .podcast-box, .contact { grid-template-columns: 1fr; }
       .strip { grid-template-columns: repeat(2, 1fr); }
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 15px 0; }
       .section-head { flex-direction: column; align-items: flex-start; }
@@ -344,7 +396,8 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#projects">Work</a>
-        <a href="#tools">Tools</a>
+        <a href="#experience">Experience</a>
+        <a href="#podcast">Podcast</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -354,12 +407,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="pill">🤖 simple tech that feels useful</div>
-          <h1>AI, data, and web tools for real everyday work.</h1>
-          <p class="lead">I build clean systems for small businesses, creators, and teams: websites, automations, dashboards, content tools, and custom internal apps.</p>
+          <div class="pill">🤖 practical systems for modern work</div>
+          <h1>AI, data, and web systems built with clarity.</h1>
+          <p class="lead">I help businesses, creators, and teams turn ideas into reliable digital tools: automation workflows, dashboards, websites, internal apps, and content systems.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Start a project</a>
-            <a class="btn" href="#projects">See cool stuff</a>
+            <a class="btn" href="#projects">View selected work</a>
           </div>
         </div>
 
@@ -378,27 +431,27 @@
     <section id="services">
       <div class="container">
         <div class="section-head">
-          <h2>What I build</h2>
-          <p>Simple offers. Strong systems behind them.</p>
+          <h2>Services</h2>
+          <p>Focused technical support for clients who need practical, dependable software.</p>
         </div>
 
         <div class="grid-3">
           <article class="card">
             <div class="icon">⚙️</div>
-            <h3>Automation</h3>
-            <p>Make repetitive work faster.</p>
-            <div class="mini-list"><span class="tag">AI helpers</span><span class="tag">intake flows</span><span class="tag">workflows</span></div>
+            <h3>Automation Systems</h3>
+            <p>Streamline repetitive work and organize intake, documents, and operations.</p>
+            <div class="mini-list"><span class="tag">AI workflows</span><span class="tag">intake tools</span><span class="tag">process design</span></div>
           </article>
           <article class="card">
             <div class="icon">📊</div>
-            <h3>Data + Dashboards</h3>
-            <p>Turn messy data into clear views.</p>
-            <div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">Tableau</span></div>
+            <h3>Data & Dashboards</h3>
+            <p>Clean data, build pipelines, and create dashboards that support decisions.</p>
+            <div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">analytics</span></div>
           </article>
           <article class="card">
             <div class="icon">🌐</div>
-            <h3>Web Systems</h3>
-            <p>Build sites, apps, and admin tools.</p>
+            <h3>Web & Internal Tools</h3>
+            <p>Design and build websites, apps, admin panels, and backend systems.</p>
             <div class="mini-list"><span class="tag">frontend</span><span class="tag">backend</span><span class="tag">databases</span></div>
           </article>
         </div>
@@ -408,47 +461,98 @@
     <section id="projects">
       <div class="container">
         <div class="section-head">
-          <h2>Cool stuff I’ve built</h2>
-          <p>A quick wall of proof — less talking, more building.</p>
+          <h2>Selected work</h2>
+          <p>A snapshot of the systems, tools, and experiments behind my technical portfolio.</p>
         </div>
 
         <div class="grid-3">
           <article class="card project-card">
-            <div><div class="icon">🛒</div><h3>DormSwap</h3><p>Student marketplace with auth, listings, messaging, and feedback.</p></div>
+            <div><div class="icon">🛒</div><h3>DormSwap</h3><p>Campus marketplace with authentication, listings, messaging, and feedback.</p></div>
             <div class="mini-list"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">Postgres</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">⚽</div><h3>Agent Crimson</h3><p>Football AI agent for predictions, fantasy tips, memory, and RAG.</p></div>
+            <div><div class="icon">⚽</div><h3>Agent Crimson</h3><p>Football AI agent for predictions, fantasy support, memory, and RAG.</p></div>
             <div class="mini-list"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">RAG</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🎥</div><h3>Crimson Webapp</h3><p>Trend-to-recording cards for shorts, OBS, and creator workflows.</p></div>
-            <div class="mini-list"><span class="tag">content tools</span><span class="tag">automation</span></div>
+            <div><div class="icon">🎥</div><h3>Crimson Webapp</h3><p>Creator workflow tool for turning trends into recording-ready topic cards.</p></div>
+            <div class="mini-list"><span class="tag">content systems</span><span class="tag">automation</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">字幕</div><h3>SnapCaption</h3><p>Caption and transcript pipeline for faster short-form videos.</p></div>
+            <div><div class="icon">字幕</div><h3>SnapCaption</h3><p>Caption and transcript pipeline for faster short-form video production.</p></div>
             <div class="mini-list"><span class="tag">Python</span><span class="tag">captions</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🕵️</div><h3>Fraud Analytics</h3><p>ETL checks, risk insights, charts, and executive summaries.</p></div>
+            <div><div class="icon">🕵️</div><h3>Fraud Analytics</h3><p>ETL validation, risk scoring, visual analysis, and executive reporting.</p></div>
             <div class="mini-list"><span class="tag">data</span><span class="tag">analytics</span><span class="tag">risk</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🖐️</div><h3>Robotic Hand</h3><p>Tendon-driven humanoid hand project using Yale OpenHand ideas.</p></div>
+            <div><div class="icon">🖐️</div><h3>Robotic Hand</h3><p>Tendon-driven humanoid hand project based on Yale OpenHand concepts.</p></div>
             <div class="mini-list"><span class="tag">robotics</span><span class="tag">systems</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🖥️</div><h3>Simple Elite</h3><p>Desktop workspace with ChatGPT, assistant panel, and terminal.</p></div>
+            <div><div class="icon">🖥️</div><h3>Simple Elite</h3><p>Desktop workspace combining ChatGPT, an assistant panel, and terminal.</p></div>
             <div class="mini-list"><span class="tag">Electron</span><span class="tag">desktop</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🎙️</div><h3>Synth Engine</h3><p>Privacy-first voice and audio experimentation studio.</p></div>
+            <div><div class="icon">🎙️</div><h3>Synth Engine</h3><p>Privacy-first voice and audio experimentation studio for Apple Silicon.</p></div>
             <div class="mini-list"><span class="tag">audio</span><span class="tag">AI</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🧰</div><h3>OpenOps Backend</h3><p>FastAPI backend with auth, CRUD, and modular structure.</p></div>
+            <div><div class="icon">🧰</div><h3>OpenOps Backend</h3><p>FastAPI backend with authentication, CRUD, and modular architecture.</p></div>
             <div class="mini-list"><span class="tag">FastAPI</span><span class="tag">JWT</span></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience & resume</h2>
+          <p>Technical background across software, systems, databases, documentation, and operational support.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="resume-card">
+            <h3>Technical Officer</h3>
+            <div class="meta">Ministry of Finance, Planning and Economic Development</div>
+            <p>Supported digital systems, workflow optimization, EDMS rollout, staff training, and technical documentation for operational teams.</p>
+            <div class="mini-list"><span class="tag">systems support</span><span class="tag">documentation</span><span class="tag">process improvement</span></div>
+          </article>
+          <article class="resume-card">
+            <h3>IT Intern</h3>
+            <div class="meta">Kampala Capital City Authority</div>
+            <p>Worked with databases, reporting support, SQL analysis, and data integrity tasks for public-sector information systems.</p>
+            <div class="mini-list"><span class="tag">SQL</span><span class="tag">data analysis</span><span class="tag">reporting</span></div>
+          </article>
+          <article class="resume-card">
+            <h3>M.S. Computer Science</h3>
+            <div class="meta">University of the Pacific</div>
+            <p>Graduate-level training in computer science with project work across full-stack development, data systems, security, robotics, and AI tools.</p>
+            <div class="mini-list"><span class="tag">software engineering</span><span class="tag">data</span><span class="tag">security</span></div>
+          </article>
+          <article class="resume-card">
+            <h3>Resume</h3>
+            <div class="meta">Professional summary</div>
+            <p>AI systems builder focused on automation, data pipelines, web applications, and practical tools for real-world workflows.</p>
+            <div class="actions"><a class="btn" href="mailto:a_odora@u.pacific.edu?subject=Request%20for%20Allan%20Odora%20Resume">Request resume</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="podcast">
+      <div class="container">
+        <div class="podcast-box">
+          <div class="podcast-mark"><strong>The Crimson Chin Post</strong></div>
+          <div>
+            <div class="pill">⚽ football media + creator systems</div>
+            <h2>Football podcast & content lab</h2>
+            <p>I also create football-focused media through The Crimson Chin Post, where I explore football stories, fan culture, commentary, and creator workflows. This connects directly to my technical work: trend tools, caption pipelines, recording prep, and media automation.</p>
+            <div class="mini-list"><span class="tag">football podcast</span><span class="tag">short-form content</span><span class="tag">creator automation</span><span class="tag">sports AI</span></div>
+            <div class="actions"><a class="btn btn-primary" href="https://www.instagram.com/thecrimsonchinpost" target="_blank" rel="noopener">Visit Crimson Chin Post</a></div>
+          </div>
         </div>
       </div>
     </section>
@@ -456,8 +560,8 @@
     <section id="tools">
       <div class="container">
         <div class="section-head">
-          <h2>My toolbox</h2>
-          <p>The stack I use to move ideas from messy to working.</p>
+          <h2>Technical toolbox</h2>
+          <p>The stack I use to move ideas from rough concept to working product.</p>
         </div>
         <div class="strip">
           <div>Python</div>
@@ -479,7 +583,7 @@
         <div class="about-box">
           <div>
             <h2>Built by Allan Odora.</h2>
-            <p>M.S. Computer Science, University of the Pacific. I like building useful software that regular people can understand and actually use.</p>
+            <p>M.S. Computer Science, University of the Pacific. I build practical software systems that are clear, useful, and connected to real operational needs.</p>
           </div>
           <div>
             <div class="mini-list">
@@ -499,8 +603,8 @@
       <div class="container">
         <div class="contact">
           <div>
-            <h2>Have an idea?</h2>
-            <p>Send the messy version. I’ll help shape it into a clean system.</p>
+            <h2>Let’s build something useful.</h2>
+            <p>Send a short note about the system, workflow, website, dashboard, or automation you want to create.</p>
             <div class="actions">
               <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Email Allan</a>
               <a class="btn" href="https://github.com/Allanodora" target="_blank" rel="noopener">GitHub</a>
@@ -519,7 +623,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© 2026 Allan Odora Systems</span>
-      <span>Simple systems. Useful tools. Real work.</span>
+      <span>AI automation • data systems • web solutions</span>
     </div>
   </footer>
 </body>
