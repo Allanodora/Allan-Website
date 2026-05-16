@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Allan Odora builds AI automation, data pipelines, dashboards, and web systems for businesses, creators, and teams." />
+  <meta name="description" content="Allan Odora Systems builds AI automation, data pipelines, dashboards, and web systems for businesses, creators, and teams." />
   <title>Allan Odora Systems | AI, Data & Web Solutions</title>
   <style>
     :root {
@@ -28,8 +28,8 @@
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 10% 8%, rgba(155, 215, 209, 0.55), transparent 28%),
-        radial-gradient(circle at 92% 14%, rgba(201, 123, 84, 0.22), transparent 28%),
+        radial-gradient(circle at 10% 8%, rgba(155, 215, 209, 0.45), transparent 28%),
+        radial-gradient(circle at 92% 14%, rgba(201, 123, 84, 0.18), transparent 28%),
         linear-gradient(180deg, var(--cream), #f7ead6 46%, #eef3e8 100%);
       line-height: 1.55;
     }
@@ -42,7 +42,7 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(18px);
-      background: rgba(251, 243, 228, 0.82);
+      background: rgba(251, 243, 228, 0.86);
       border-bottom: 1px solid var(--line);
     }
 
@@ -83,11 +83,7 @@
       color: var(--muted);
     }
 
-    .nav-links a {
-      padding: 8px 11px;
-      border-radius: 999px;
-    }
-
+    .nav-links a { padding: 8px 11px; border-radius: 999px; }
     .nav-links a:hover { background: rgba(255, 255, 255, 0.64); color: var(--ink); }
 
     .hero { padding: 76px 0 48px; }
@@ -114,17 +110,17 @@
     }
 
     h1 {
-      max-width: 830px;
-      font-size: clamp(2.55rem, 6.6vw, 5.4rem);
-      line-height: 0.94;
-      letter-spacing: -0.075em;
+      max-width: 860px;
+      font-size: clamp(2.55rem, 6.3vw, 5.15rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
       margin-bottom: 18px;
     }
 
     .lead {
-      max-width: 680px;
+      max-width: 700px;
       color: var(--muted);
-      font-size: clamp(1.04rem, 2vw, 1.22rem);
+      font-size: clamp(1.04rem, 2vw, 1.2rem);
     }
 
     .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
@@ -148,8 +144,8 @@
     .living-card {
       min-height: 430px;
       border-radius: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.82), rgba(220,230,226,0.76));
-      border: 1px solid rgba(255,255,255,0.85);
+      background: linear-gradient(145deg, rgba(255,255,255,0.86), rgba(220,230,226,0.8));
+      border: 1px solid rgba(255,255,255,0.9);
       box-shadow: var(--shadow);
       padding: 24px;
       position: relative;
@@ -163,9 +159,7 @@
       border-radius: 50%;
       animation: spin 22s linear infinite;
     }
-
     .orbit.two { inset: 70px 42px; animation-duration: 16s; animation-direction: reverse; }
-
     @keyframes spin { to { transform: rotate(360deg); } }
 
     .robot {
@@ -219,7 +213,6 @@
       color: var(--moss);
       animation: bob 5s ease-in-out infinite;
     }
-
     .chip-1 { left: 22px; top: 48px; }
     .chip-2 { right: 22px; top: 92px; animation-delay: 0.9s; color: var(--clay); }
     .chip-3 { left: 42px; bottom: 54px; animation-delay: 1.4s; }
@@ -235,19 +228,18 @@
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
-    .card {
-      background: rgba(255, 253, 248, 0.78);
-      border: 1px solid rgba(255,255,255,0.85);
+    .card, .resume-card {
+      background: rgba(255, 253, 248, 0.82);
+      border: 1px solid rgba(255,255,255,0.9);
       border-radius: 26px;
       padding: 20px;
       box-shadow: 0 10px 28px rgba(79, 55, 34, 0.08);
       transition: 0.18s ease;
     }
-
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .icon { font-size: 1.65rem; margin-bottom: 8px; }
-    .card h3 { font-size: 1.08rem; margin-bottom: 7px; letter-spacing: -0.02em; }
-    .card p { color: var(--muted); font-size: 0.96rem; }
+    .card:hover, .resume-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .card h3, .resume-card h3 { font-size: 1.08rem; margin-bottom: 7px; letter-spacing: -0.02em; }
+    .card p, .resume-card p { color: var(--muted); font-size: 0.96rem; }
 
     .mini-list { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 7px; }
     .tag {
@@ -266,12 +258,7 @@
     .project-card:nth-child(2n) .tag { background: rgba(201, 123, 84, 0.15); color: #7a3f29; }
     .project-card:nth-child(3n) .tag { background: rgba(155, 215, 209, 0.28); color: #245a55; }
 
-    .strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
+    .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
     .strip div {
       border-radius: 22px;
       padding: 16px;
@@ -284,7 +271,7 @@
     }
 
     .about-box {
-      background: linear-gradient(135deg, rgba(47, 93, 80, 0.92), rgba(111, 139, 96, 0.88));
+      background: linear-gradient(135deg, rgba(47, 93, 80, 0.94), rgba(111, 139, 96, 0.9));
       color: var(--cream);
       border-radius: 34px;
       padding: 30px;
@@ -293,24 +280,12 @@
       gap: 24px;
       box-shadow: var(--shadow);
     }
-
-    .about-box p { color: rgba(251, 243, 228, 0.82); margin-top: 10px; }
+    .about-box p { color: rgba(251, 243, 228, 0.84); margin-top: 10px; }
     .about-box .tag { background: rgba(255,255,255,0.14); color: var(--cream); border-color: rgba(255,255,255,0.16); }
-
-    .resume-card {
-      background: rgba(255, 253, 248, 0.82);
-      border: 1px solid rgba(255,255,255,0.9);
-      border-radius: 28px;
-      padding: 22px;
-      box-shadow: 0 10px 28px rgba(79, 55, 34, 0.08);
-    }
-
-    .resume-card h3 { margin-bottom: 6px; letter-spacing: -0.03em; }
     .resume-card .meta { color: var(--moss); font-weight: 900; font-size: 0.9rem; margin-bottom: 8px; }
-    .resume-card p { color: var(--muted); }
 
     .podcast-box {
-      background: linear-gradient(135deg, rgba(201, 123, 84, 0.18), rgba(155, 215, 209, 0.3));
+      background: linear-gradient(135deg, rgba(201, 123, 84, 0.15), rgba(155, 215, 209, 0.26));
       border: 1px solid rgba(255,255,255,0.9);
       border-radius: 34px;
       padding: 30px;
@@ -320,7 +295,6 @@
       align-items: center;
       box-shadow: var(--shadow);
     }
-
     .podcast-mark {
       min-height: 230px;
       border-radius: 28px;
@@ -333,7 +307,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .podcast-mark:before, .podcast-mark:after {
       content: "";
       position: absolute;
@@ -342,7 +315,6 @@
       border-radius: 50%;
       border: 1px dashed rgba(251,243,228,0.26);
     }
-
     .podcast-mark:before { top: -52px; left: -44px; }
     .podcast-mark:after { bottom: -54px; right: -44px; }
     .podcast-mark strong { font-size: 2rem; line-height: 1; letter-spacing: -0.05em; z-index: 1; }
@@ -359,16 +331,9 @@
       gap: 20px;
       align-items: center;
     }
-
     .contact h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 0.98; letter-spacing: -0.06em; margin-bottom: 10px; }
     .contact p { color: var(--muted); }
-
-    .contact-card {
-      background: linear-gradient(145deg, #f3e0c5, #e7f0df);
-      border-radius: 26px;
-      padding: 20px;
-      border: 1px solid rgba(31, 42, 36, 0.08);
-    }
+    .contact-card { background: linear-gradient(145deg, #f3e0c5, #e7f0df); border-radius: 26px; padding: 20px; border: 1px solid rgba(31, 42, 36, 0.08); }
 
     footer { padding: 26px 0 38px; color: var(--muted); }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -397,7 +362,7 @@
         <a href="#services">Services</a>
         <a href="#projects">Work</a>
         <a href="#experience">Experience</a>
-        <a href="#podcast">Podcast</a>
+        <a href="#podcast">Media Lab</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -407,9 +372,9 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="pill">🤖 practical systems for modern work</div>
-          <h1>AI, data, and web systems built with clarity.</h1>
-          <p class="lead">I help businesses, creators, and teams turn ideas into reliable digital tools: automation workflows, dashboards, websites, internal apps, and content systems.</p>
+          <div class="pill">systems strategy • software delivery • automation</div>
+          <h1>Serious software systems for practical business work.</h1>
+          <p class="lead">Allan Odora Systems designs and builds AI automation, data dashboards, websites, internal tools, and creator workflow software for clients who need dependable digital systems.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Start a project</a>
             <a class="btn" href="#projects">View selected work</a>
@@ -420,10 +385,10 @@
           <div class="orbit"></div>
           <div class="orbit two"></div>
           <div class="robot"><div class="robot-face"><span class="eye"></span><span class="eye"></span></div></div>
-          <span class="float-chip chip-1">AI</span>
+          <span class="float-chip chip-1">Build</span>
           <span class="float-chip chip-2">Data</span>
-          <span class="float-chip chip-3">Web</span>
-          <span class="float-chip chip-4">Automation</span>
+          <span class="float-chip chip-3">Deploy</span>
+          <span class="float-chip chip-4">Automate</span>
         </aside>
       </div>
     </section>
@@ -432,26 +397,26 @@
       <div class="container">
         <div class="section-head">
           <h2>Services</h2>
-          <p>Focused technical support for clients who need practical, dependable software.</p>
+          <p>Technical delivery for businesses, creators, and teams that need organized systems, not vague AI hype.</p>
         </div>
 
         <div class="grid-3">
           <article class="card">
             <div class="icon">⚙️</div>
             <h3>Automation Systems</h3>
-            <p>Streamline repetitive work and organize intake, documents, and operations.</p>
+            <p>Workflow tools that reduce manual work, improve intake, and keep operations organized.</p>
             <div class="mini-list"><span class="tag">AI workflows</span><span class="tag">intake tools</span><span class="tag">process design</span></div>
           </article>
           <article class="card">
             <div class="icon">📊</div>
             <h3>Data & Dashboards</h3>
-            <p>Clean data, build pipelines, and create dashboards that support decisions.</p>
+            <p>Data cleanup, reporting pipelines, and dashboards that make business information easier to use.</p>
             <div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">analytics</span></div>
           </article>
           <article class="card">
             <div class="icon">🌐</div>
             <h3>Web & Internal Tools</h3>
-            <p>Design and build websites, apps, admin panels, and backend systems.</p>
+            <p>Professional websites, admin panels, databases, and backend systems built for real workflows.</p>
             <div class="mini-list"><span class="tag">frontend</span><span class="tag">backend</span><span class="tag">databases</span></div>
           </article>
         </div>
@@ -462,7 +427,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Selected work</h2>
-          <p>A snapshot of the systems, tools, and experiments behind my technical portfolio.</p>
+          <p>Portfolio systems across web development, AI tools, data workflows, automation, robotics, and media infrastructure.</p>
         </div>
 
         <div class="grid-3">
@@ -475,7 +440,7 @@
             <div class="mini-list"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">RAG</span></div>
           </article>
           <article class="card project-card">
-            <div><div class="icon">🎥</div><h3>Crimson Webapp</h3><p>Creator workflow tool for turning trends into recording-ready topic cards.</p></div>
+            <div><div class="icon">🎥</div><h3>Crimson Webapp</h3><p>Creator workflow system for turning trends into recording-ready topic cards.</p></div>
             <div class="mini-list"><span class="tag">content systems</span><span class="tag">automation</span></div>
           </article>
           <article class="card project-card">
@@ -510,7 +475,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Experience & resume</h2>
-          <p>Technical background across software, systems, databases, documentation, and operational support.</p>
+          <p>Background in software systems, databases, documentation, operations, and technical support.</p>
         </div>
 
         <div class="grid-2">
@@ -523,19 +488,19 @@
           <article class="resume-card">
             <h3>IT Intern</h3>
             <div class="meta">Kampala Capital City Authority</div>
-            <p>Worked with databases, reporting support, SQL analysis, and data integrity tasks for public-sector information systems.</p>
+            <p>Worked with databases, SQL analysis, reporting support, and data integrity tasks for public-sector information systems.</p>
             <div class="mini-list"><span class="tag">SQL</span><span class="tag">data analysis</span><span class="tag">reporting</span></div>
           </article>
           <article class="resume-card">
             <h3>M.S. Computer Science</h3>
             <div class="meta">University of the Pacific</div>
-            <p>Graduate-level training in computer science with project work across full-stack development, data systems, security, robotics, and AI tools.</p>
+            <p>Graduate-level training with project work across full-stack development, data systems, security, robotics, and AI tools.</p>
             <div class="mini-list"><span class="tag">software engineering</span><span class="tag">data</span><span class="tag">security</span></div>
           </article>
           <article class="resume-card">
             <h3>Resume</h3>
             <div class="meta">Professional summary</div>
-            <p>AI systems builder focused on automation, data pipelines, web applications, and practical tools for real-world workflows.</p>
+            <p>AI systems builder focused on automation, data pipelines, web applications, and practical software for real-world workflows.</p>
             <div class="actions"><a class="btn" href="mailto:a_odora@u.pacific.edu?subject=Request%20for%20Allan%20Odora%20Resume">Request resume</a></div>
           </article>
         </div>
@@ -547,10 +512,10 @@
         <div class="podcast-box">
           <div class="podcast-mark"><strong>The Crimson Chin Post</strong></div>
           <div>
-            <div class="pill">⚽ football media + creator systems</div>
-            <h2>Football podcast & content lab</h2>
-            <p>I also create football-focused media through The Crimson Chin Post, where I explore football stories, fan culture, commentary, and creator workflows. This connects directly to my technical work: trend tools, caption pipelines, recording prep, and media automation.</p>
-            <div class="mini-list"><span class="tag">football podcast</span><span class="tag">short-form content</span><span class="tag">creator automation</span><span class="tag">sports AI</span></div>
+            <div class="pill">football media • creator workflow systems</div>
+            <h2>Media lab for creator technology</h2>
+            <p>The Crimson Chin Post is my football media lab. It connects to my technical work through trend research tools, caption pipelines, recording prep workflows, sports-content automation, and creator systems.</p>
+            <div class="mini-list"><span class="tag">football media</span><span class="tag">content workflows</span><span class="tag">creator automation</span><span class="tag">sports AI</span></div>
             <div class="actions"><a class="btn btn-primary" href="https://www.instagram.com/thecrimsonchinpost" target="_blank" rel="noopener">Visit Crimson Chin Post</a></div>
           </div>
         </div>
@@ -564,16 +529,8 @@
           <p>The stack I use to move ideas from rough concept to working product.</p>
         </div>
         <div class="strip">
-          <div>Python</div>
-          <div>JavaScript</div>
-          <div>React</div>
-          <div>Spring Boot</div>
-          <div>PostgreSQL</div>
-          <div>FastAPI</div>
-          <div>Docker</div>
-          <div>Tableau</div>
-          <div>GitHub</div>
-          <div>AI Tools</div>
+          <div>Python</div><div>JavaScript</div><div>React</div><div>Spring Boot</div><div>PostgreSQL</div>
+          <div>FastAPI</div><div>Docker</div><div>Tableau</div><div>GitHub</div><div>AI Tools</div>
         </div>
       </div>
     </section>
@@ -587,12 +544,8 @@
           </div>
           <div>
             <div class="mini-list">
-              <span class="tag">AI systems</span>
-              <span class="tag">business tools</span>
-              <span class="tag">creator workflows</span>
-              <span class="tag">dashboards</span>
-              <span class="tag">automation</span>
-              <span class="tag">full-stack apps</span>
+              <span class="tag">AI systems</span><span class="tag">business tools</span><span class="tag">creator workflows</span>
+              <span class="tag">dashboards</span><span class="tag">automation</span><span class="tag">full-stack apps</span>
             </div>
           </div>
         </div>
@@ -603,8 +556,8 @@
       <div class="container">
         <div class="contact">
           <div>
-            <h2>Let’s build something useful.</h2>
-            <p>Send a short note about the system, workflow, website, dashboard, or automation you want to create.</p>
+            <h2>Let’s build the system properly.</h2>
+            <p>Send a short note about the workflow, website, dashboard, automation, or internal tool you want to build.</p>
             <div class="actions">
               <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Email Allan</a>
               <a class="btn" href="https://github.com/Allanodora" target="_blank" rel="noopener">GitHub</a>
