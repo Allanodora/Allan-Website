@@ -3,34 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Allan Odora Systems builds AI automation, data pipelines, dashboards, and web systems for businesses, creators, and teams." />
-  <title>Allan Odora Systems | AI, Data & Web Solutions</title>
+  <meta name="description" content="Allan Odora Systems builds websites, dashboards, automation systems, internal tools, and creator workflow software for businesses, creators, and teams." />
+  <title>Allan Odora Systems | Web, Data & Automation Systems</title>
   <style>
     :root {
-      --cream: #fbf3e4;
-      --sand: #ead7bd;
-      --clay: #c97b54;
-      --sage: #8faf8b;
-      --moss: #2f5d50;
-      --ink: #1f2a24;
-      --muted: #657066;
-      --sky: #9bd7d1;
-      --steel: #dce6e2;
-      --white: #fffdf8;
-      --line: rgba(31, 42, 36, 0.13);
-      --shadow: 0 18px 45px rgba(79, 55, 34, 0.13);
+      --paper: #fbf6ea;
+      --paper-2: #f3ead8;
+      --cream: #fffaf1;
+      --ink: #20251f;
+      --forest: #28483c;
+      --moss: #637c5f;
+      --olive: #9aa77b;
+      --clay: #b46f48;
+      --copper: #d4a36f;
+      --mist: #dce8e1;
+      --sky: #b7ddd7;
+      --muted: #6c7269;
+      --line: rgba(32, 37, 31, 0.13);
+      --line-strong: rgba(32, 37, 31, 0.22);
+      --shadow: 0 22px 55px rgba(70, 54, 32, 0.12);
+      --soft-shadow: 0 12px 28px rgba(70, 54, 32, 0.08);
+      --radius: 24px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 10% 8%, rgba(155, 215, 209, 0.45), transparent 28%),
-        radial-gradient(circle at 92% 14%, rgba(201, 123, 84, 0.18), transparent 28%),
-        linear-gradient(180deg, var(--cream), #f7ead6 46%, #eef3e8 100%);
+        radial-gradient(circle at 12% 4%, rgba(183, 221, 215, 0.44), transparent 25%),
+        radial-gradient(circle at 88% 12%, rgba(212, 163, 111, 0.28), transparent 26%),
+        linear-gradient(180deg, var(--paper), var(--paper-2) 48%, #eef2e7 100%);
       line-height: 1.55;
     }
 
@@ -40,14 +44,14 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(251, 243, 228, 0.86);
+      z-index: 40;
+      background: rgba(251, 246, 234, 0.78);
+      backdrop-filter: blur(22px);
       border-bottom: 1px solid var(--line);
     }
 
     .nav-inner {
-      min-height: 70px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -57,221 +61,416 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 900;
+      gap: 12px;
+      font-weight: 850;
       letter-spacing: -0.04em;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
-    .bot-dot {
-      width: 34px;
-      height: 34px;
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
       display: grid;
       place-items: center;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--moss), var(--sage));
       color: var(--cream);
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, var(--forest), var(--moss));
+      box-shadow: var(--soft-shadow);
+      font-size: 0.88rem;
+      letter-spacing: -0.05em;
     }
 
     .nav-links {
       display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
       align-items: center;
-      font-size: 0.93rem;
+      flex-wrap: wrap;
+      gap: 6px;
       color: var(--muted);
+      font-weight: 680;
+      font-size: 0.92rem;
     }
 
-    .nav-links a { padding: 8px 11px; border-radius: 999px; }
-    .nav-links a:hover { background: rgba(255, 255, 255, 0.64); color: var(--ink); }
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+    }
 
-    .hero { padding: 76px 0 48px; }
+    .nav-links a:hover { background: rgba(255, 250, 241, 0.78); color: var(--ink); }
+
+    .hero { padding: 76px 0 38px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 30px;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 34px;
       align-items: center;
     }
 
-    .pill {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: var(--white);
+      gap: 10px;
+      padding: 8px 12px;
       border: 1px solid var(--line);
-      color: var(--moss);
-      font-weight: 800;
-      font-size: 0.9rem;
-      box-shadow: 0 8px 25px rgba(79, 55, 34, 0.07);
-      margin-bottom: 18px;
+      border-radius: 999px;
+      color: var(--forest);
+      background: rgba(255, 250, 241, 0.7);
+      font-weight: 820;
+      font-size: 0.88rem;
+      box-shadow: var(--soft-shadow);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--clay);
+      box-shadow: 0 0 0 5px rgba(180, 111, 72, 0.13);
     }
 
     h1 {
-      max-width: 860px;
-      font-size: clamp(2.55rem, 6.3vw, 5.15rem);
-      line-height: 0.96;
-      letter-spacing: -0.07em;
-      margin-bottom: 18px;
+      max-width: 870px;
+      font-size: clamp(2.7rem, 6.1vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+      margin-bottom: 20px;
+      font-weight: 860;
     }
 
     .lead {
-      max-width: 700px;
+      max-width: 690px;
       color: var(--muted);
-      font-size: clamp(1.04rem, 2vw, 1.2rem);
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
     }
 
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 
     .btn {
       min-height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       padding: 0 18px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 900;
-      background: rgba(255, 253, 248, 0.78);
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 250, 241, 0.76);
+      font-weight: 830;
       transition: 0.18s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--soft-shadow); }
     .btn-primary { background: var(--ink); color: var(--cream); border-color: var(--ink); }
 
-    .living-card {
-      min-height: 430px;
+    .studio-panel {
+      min-height: 448px;
       border-radius: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.86), rgba(220,230,226,0.8));
-      border: 1px solid rgba(255,255,255,0.9);
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.78);
+      background:
+        linear-gradient(145deg, rgba(255,250,241,0.88), rgba(220,232,225,0.74)),
+        linear-gradient(90deg, rgba(40,72,60,0.08), rgba(180,111,72,0.08));
       box-shadow: var(--shadow);
-      padding: 24px;
       position: relative;
       overflow: hidden;
     }
 
-    .orbit {
+    .studio-panel:before {
+      content: "";
       position: absolute;
-      inset: 24px;
-      border: 1px dashed rgba(47, 93, 80, 0.2);
-      border-radius: 50%;
-      animation: spin 22s linear infinite;
+      inset: 18px;
+      border-radius: 26px;
+      border: 1px solid rgba(32,37,31,0.08);
+      pointer-events: none;
     }
-    .orbit.two { inset: 70px 42px; animation-duration: 16s; animation-direction: reverse; }
-    @keyframes spin { to { transform: rotate(360deg); } }
 
-    .robot {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: min(245px, 70%);
-      aspect-ratio: 1;
-      border-radius: 38px;
-      background: linear-gradient(145deg, var(--steel), var(--white));
-      border: 1px solid rgba(31, 42, 36, 0.1);
-      box-shadow: inset 0 -18px 35px rgba(47, 93, 80, 0.08), var(--shadow);
+    .system-board {
+      height: 100%;
+      min-height: 412px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .board-top, .board-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .board-title {
+      font-weight: 860;
+      letter-spacing: -0.05em;
+      font-size: 1.15rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,250,241,0.72);
+      border: 1px solid var(--line);
+      color: var(--forest);
+      font-size: 0.78rem;
+      font-weight: 820;
+    }
+
+    .status:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--moss);
+    }
+
+    .board-main {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 14px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .module {
+      border-radius: 22px;
+      padding: 16px;
+      border: 1px solid rgba(32,37,31,0.1);
+      background: rgba(255,250,241,0.72);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .module.dark {
+      background: linear-gradient(135deg, var(--forest), #22352e);
+      color: var(--cream);
+    }
+
+    .module small {
+      display: block;
+      color: inherit;
+      opacity: 0.68;
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      margin-bottom: 6px;
+    }
+
+    .module strong {
+      display: block;
+      font-size: 1.05rem;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .module p { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+    .module.dark p { color: rgba(255,250,241,0.72); }
+
+    .flow-line {
+      min-height: 100%;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,250,241,0.82), rgba(255,250,241,0.42)),
+        repeating-linear-gradient(135deg, rgba(40,72,60,0.08) 0, rgba(40,72,60,0.08) 1px, transparent 1px, transparent 12px);
+      border: 1px solid rgba(32,37,31,0.1);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(32,37,31,0.09);
+    }
+
+    .step:last-child { border-bottom: 0; }
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
-    }
-
-    .robot-face {
-      width: 70%;
-      height: 48%;
-      border-radius: 28px;
       background: var(--ink);
+      color: var(--cream);
+      font-weight: 860;
+      font-size: 0.84rem;
+    }
+
+    .step strong { display: block; letter-spacing: -0.035em; }
+    .step span { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+
+    .board-bottom { color: var(--muted); font-size: 0.86rem; font-weight: 700; }
+
+    section { padding: 54px 0; }
+    .section-head {
+      margin-bottom: 22px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 22px;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
     }
 
-    .eye {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--sky);
-      box-shadow: 0 0 18px rgba(155, 215, 209, 0.9);
-      animation: blink 4s infinite;
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1;
+      letter-spacing: -0.065em;
+      font-weight: 850;
     }
 
-    @keyframes blink {
-      0%, 92%, 100% { transform: scaleY(1); }
-      95% { transform: scaleY(0.12); }
-    }
-
-    .float-chip {
-      position: absolute;
-      padding: 10px 12px;
-      border-radius: 16px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 28px rgba(79, 55, 34, 0.12);
-      font-weight: 900;
-      color: var(--moss);
-      animation: bob 5s ease-in-out infinite;
-    }
-    .chip-1 { left: 22px; top: 48px; }
-    .chip-2 { right: 22px; top: 92px; animation-delay: 0.9s; color: var(--clay); }
-    .chip-3 { left: 42px; bottom: 54px; animation-delay: 1.4s; }
-    .chip-4 { right: 32px; bottom: 34px; animation-delay: 2.1s; color: var(--clay); }
-    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-
-    section { padding: 52px 0; }
-    .section-head { margin-bottom: 22px; display: flex; justify-content: space-between; gap: 18px; align-items: end; }
-    .section-head h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 0.98; letter-spacing: -0.06em; }
-    .section-head p { max-width: 500px; color: var(--muted); }
+    .section-head p { max-width: 520px; color: var(--muted); }
 
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
-    .card, .resume-card {
-      background: rgba(255, 253, 248, 0.82);
-      border: 1px solid rgba(255,255,255,0.9);
-      border-radius: 26px;
+    .card {
+      background: rgba(255, 250, 241, 0.78);
+      border: 1px solid rgba(255,255,255,0.88);
+      border-radius: var(--radius);
       padding: 20px;
-      box-shadow: 0 10px 28px rgba(79, 55, 34, 0.08);
+      box-shadow: var(--soft-shadow);
       transition: 0.18s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .card:hover, .resume-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .icon { font-size: 1.4rem; margin-bottom: 8px; }
-    .card h3, .resume-card h3 { font-size: 1.08rem; margin-bottom: 7px; letter-spacing: -0.02em; }
-    .card p, .resume-card p { color: var(--muted); font-size: 0.96rem; }
 
-    .mini-list { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 7px; }
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--forest), var(--olive), var(--clay));
+      opacity: 0.68;
+    }
+
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .kicker { color: var(--clay); font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 860; margin-bottom: 10px; }
+    .card h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -0.035em; }
+    .card p { color: var(--muted); font-size: 0.96rem; }
+
+    .mini-list { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 7px; }
     .tag {
       display: inline-flex;
       align-items: center;
       border-radius: 999px;
       padding: 6px 9px;
-      background: rgba(143, 175, 139, 0.18);
-      color: var(--moss);
+      background: rgba(99, 124, 95, 0.14);
+      color: var(--forest);
       font-size: 0.78rem;
       font-weight: 800;
-      border: 1px solid rgba(47, 93, 80, 0.1);
+      border: 1px solid rgba(40, 72, 60, 0.1);
     }
 
-    .project-card { min-height: 178px; display: flex; flex-direction: column; justify-content: space-between; }
-    .project-card:nth-child(2n) .tag { background: rgba(201, 123, 84, 0.15); color: #7a3f29; }
-    .project-card:nth-child(3n) .tag { background: rgba(155, 215, 209, 0.28); color: #245a55; }
-
-    .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
-    .strip div {
-      border-radius: 22px;
-      padding: 16px;
-      background: rgba(255, 253, 248, 0.66);
-      border: 1px solid rgba(255,255,255,0.9);
-      text-align: center;
+    .project-card { min-height: 188px; display: flex; flex-direction: column; justify-content: space-between; }
+    .project-code {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: rgba(32,37,31,0.06);
+      border: 1px solid rgba(32,37,31,0.09);
       font-weight: 900;
-      color: var(--moss);
-      box-shadow: 0 8px 20px rgba(79, 55, 34, 0.07);
+      color: var(--forest);
+      margin-bottom: 12px;
+      letter-spacing: -0.06em;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .process-card {
+      border-radius: var(--radius);
+      padding: 19px;
+      background: rgba(255,250,241,0.68);
+      border: 1px solid rgba(255,255,255,0.86);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .process-card .num { margin-bottom: 14px; }
+    .process-card h3 { letter-spacing: -0.035em; margin-bottom: 6px; }
+    .process-card p { color: var(--muted); font-size: 0.94rem; }
+
+    .resume-card {
+      background: rgba(255, 250, 241, 0.78);
+      border: 1px solid rgba(255,255,255,0.88);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--soft-shadow);
+    }
+    .resume-card h3 { letter-spacing: -0.035em; margin-bottom: 5px; }
+    .resume-card .meta { color: var(--forest); font-weight: 850; font-size: 0.9rem; margin-bottom: 8px; }
+    .resume-card p { color: var(--muted); }
+
+    .media-box {
+      background:
+        linear-gradient(135deg, rgba(32, 37, 31, 0.96), rgba(40, 72, 60, 0.92)),
+        radial-gradient(circle at 20% 10%, rgba(212, 163, 111, 0.5), transparent 28%);
+      color: var(--cream);
+      border-radius: 34px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 22px;
+      align-items: stretch;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .media-mark {
+      min-height: 238px;
+      border-radius: 26px;
+      background:
+        linear-gradient(160deg, rgba(255,250,241,0.13), rgba(255,250,241,0.04)),
+        repeating-linear-gradient(90deg, rgba(255,250,241,0.08) 0, rgba(255,250,241,0.08) 1px, transparent 1px, transparent 16px);
+      border: 1px solid rgba(255,250,241,0.14);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .media-mark strong { font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 0.95; letter-spacing: -0.07em; }
+    .media-box .eyebrow { margin-bottom: 14px; background: rgba(255,250,241,0.1); color: var(--cream); border-color: rgba(255,250,241,0.14); box-shadow: none; }
+    .media-box p { color: rgba(255,250,241,0.74); }
+    .media-box .tag { background: rgba(255,250,241,0.1); color: var(--cream); border-color: rgba(255,250,241,0.12); }
+    .media-box .btn-primary { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+
+    .tool-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .tool-strip div {
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255,250,241,0.65);
+      border: 1px solid rgba(255,255,255,0.86);
+      box-shadow: var(--soft-shadow);
+      font-weight: 850;
+      color: var(--forest);
+      text-align: center;
     }
 
     .about-box {
-      background: linear-gradient(135deg, rgba(47, 93, 80, 0.94), rgba(111, 139, 96, 0.9));
+      background: linear-gradient(135deg, rgba(40, 72, 60, 0.94), rgba(99, 124, 95, 0.9));
       color: var(--cream);
       border-radius: 34px;
       padding: 30px;
@@ -280,89 +479,60 @@
       gap: 24px;
       box-shadow: var(--shadow);
     }
-    .about-box p { color: rgba(251, 243, 228, 0.84); margin-top: 10px; }
-    .about-box .tag { background: rgba(255,255,255,0.14); color: var(--cream); border-color: rgba(255,255,255,0.16); }
-    .resume-card .meta { color: var(--moss); font-weight: 900; font-size: 0.9rem; margin-bottom: 8px; }
-
-    .podcast-box {
-      background: linear-gradient(135deg, rgba(201, 123, 84, 0.15), rgba(155, 215, 209, 0.26));
-      border: 1px solid rgba(255,255,255,0.9);
-      border-radius: 34px;
-      padding: 30px;
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 22px;
-      align-items: center;
-      box-shadow: var(--shadow);
-    }
-    .podcast-mark {
-      min-height: 230px;
-      border-radius: 28px;
-      background: var(--ink);
-      color: var(--cream);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .podcast-mark:before, .podcast-mark:after {
-      content: "";
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      border: 1px dashed rgba(251,243,228,0.26);
-    }
-    .podcast-mark:before { top: -52px; left: -44px; }
-    .podcast-mark:after { bottom: -54px; right: -44px; }
-    .podcast-mark strong { font-size: 2rem; line-height: 1; letter-spacing: -0.05em; z-index: 1; }
-    .podcast-box p { color: var(--muted); }
+    .about-box p { color: rgba(255,250,241,0.78); margin-top: 10px; }
+    .about-box .tag { background: rgba(255,250,241,0.13); color: var(--cream); border-color: rgba(255,250,241,0.14); }
 
     .contact {
-      background: var(--white);
-      border: 1px solid rgba(255,255,255,0.9);
+      background: rgba(255,250,241,0.86);
+      border: 1px solid rgba(255,255,255,0.92);
       border-radius: 34px;
       padding: 30px;
       box-shadow: var(--shadow);
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 20px;
       align-items: center;
     }
-    .contact h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 0.98; letter-spacing: -0.06em; margin-bottom: 10px; }
+    .contact h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1; letter-spacing: -0.065em; margin-bottom: 10px; }
     .contact p { color: var(--muted); }
-    .contact-card { background: linear-gradient(145deg, #f3e0c5, #e7f0df); border-radius: 26px; padding: 20px; border: 1px solid rgba(31, 42, 36, 0.08); }
+    .contact-card {
+      background: linear-gradient(145deg, rgba(220,232,225,0.78), rgba(255,250,241,0.9));
+      border-radius: 26px;
+      padding: 20px;
+      border: 1px solid rgba(32, 37, 31, 0.08);
+    }
 
     footer { padding: 26px 0 38px; color: var(--muted); }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
-    @media (max-width: 900px) {
-      .hero-grid, .grid-3, .grid-4, .grid-2, .about-box, .podcast-box, .contact { grid-template-columns: 1fr; }
-      .strip { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 940px) {
+      .hero-grid, .grid-3, .grid-2, .media-box, .about-box, .contact { grid-template-columns: 1fr; }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .tool-strip { grid-template-columns: repeat(2, 1fr); }
+      .board-main { grid-template-columns: 1fr; }
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 15px 0; }
       .section-head { flex-direction: column; align-items: flex-start; }
-      .living-card { min-height: 340px; }
-      .float-chip { font-size: 0.8rem; }
+      .studio-panel { min-height: auto; }
     }
 
-    @media (max-width: 520px) {
-      .strip { grid-template-columns: 1fr; }
-      .chip-2, .chip-4 { right: 12px; }
-      .chip-1, .chip-3 { left: 12px; }
+    @media (max-width: 540px) {
+      .process, .tool-strip { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px; }
+      .container { width: min(100% - 28px, 1120px); }
+      h1 { font-size: clamp(2.4rem, 16vw, 3.8rem); }
     }
   </style>
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#top"><span class="bot-dot">AO</span> Allan Odora Systems</a>
+      <a class="brand" href="#top"><span class="mark">AO</span> Allan Odora Systems</a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#projects">Work</a>
+        <a href="#process">Process</a>
         <a href="#experience">Experience</a>
-        <a href="#podcast">Media Lab</a>
+        <a href="#media-lab">Media Lab</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -372,23 +542,45 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="pill">systems strategy • software delivery • automation</div>
-          <h1>Serious software systems for practical business work.</h1>
-          <p class="lead">Allan Odora Systems designs and builds AI automation, data dashboards, websites, internal tools, and creator workflow software for clients who need dependable digital systems.</p>
+          <div class="eyebrow">web • data • automation • systems</div>
+          <h1>Reliable systems for real business work.</h1>
+          <p class="lead">Allan Odora Systems builds websites, dashboards, internal tools, and workflow automations for people who need their ideas turned into clean, usable software.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Start a project</a>
             <a class="btn" href="#projects">View selected work</a>
           </div>
         </div>
 
-        <aside class="living-card" aria-label="Animated system illustration">
-          <div class="orbit"></div>
-          <div class="orbit two"></div>
-          <div class="robot"><div class="robot-face"><span class="eye"></span><span class="eye"></span></div></div>
-          <span class="float-chip chip-1">Build</span>
-          <span class="float-chip chip-2">Data</span>
-          <span class="float-chip chip-3">Deploy</span>
-          <span class="float-chip chip-4">Automate</span>
+        <aside class="studio-panel" aria-label="Systems studio preview">
+          <div class="system-board">
+            <div class="board-top">
+              <span class="board-title">Systems Studio</span>
+              <span class="status">Taking projects</span>
+            </div>
+            <div class="board-main">
+              <div class="stack">
+                <div class="module dark">
+                  <small>Focus</small>
+                  <strong>Clear tools for messy workflows.</strong>
+                  <p>Build the thing people can actually use.</p>
+                </div>
+                <div class="module">
+                  <small>Best fit</small>
+                  <strong>Websites, dashboards, automations, internal tools.</strong>
+                </div>
+              </div>
+              <div class="flow-line">
+                <div class="step"><span class="num">1</span><div><strong>Listen</strong><span>Understand the real problem.</span></div></div>
+                <div class="step"><span class="num">2</span><div><strong>Design</strong><span>Map the workflow before building.</span></div></div>
+                <div class="step"><span class="num">3</span><div><strong>Build</strong><span>Deliver a working system.</span></div></div>
+                <div class="step"><span class="num">4</span><div><strong>Improve</strong><span>Support, polish, and maintain.</span></div></div>
+              </div>
+            </div>
+            <div class="board-bottom">
+              <span>Professional enough for serious teams.</span>
+              <span>Welcoming enough for first-time clients.</span>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
@@ -397,24 +589,23 @@
       <div class="container">
         <div class="section-head">
           <h2>Services</h2>
-          <p>Technical delivery for businesses, creators, and teams that need organized systems, not vague AI hype.</p>
+          <p>Technical delivery for businesses, creators, and teams that need organized systems, not vague tech hype.</p>
         </div>
-
         <div class="grid-3">
           <article class="card">
-            <div class="icon">⚙️</div>
+            <div class="kicker">Workflow</div>
             <h3>Automation Systems</h3>
-            <p>Workflow tools that reduce manual work, improve intake, and keep operations organized.</p>
+            <p>Tools that reduce manual work, improve intake, and keep operations organized.</p>
             <div class="mini-list"><span class="tag">AI workflows</span><span class="tag">intake tools</span><span class="tag">process design</span></div>
           </article>
           <article class="card">
-            <div class="icon">📊</div>
+            <div class="kicker">Information</div>
             <h3>Data & Dashboards</h3>
             <p>Data cleanup, reporting pipelines, and dashboards that make business information easier to use.</p>
             <div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">analytics</span></div>
           </article>
           <article class="card">
-            <div class="icon">🌐</div>
+            <div class="kicker">Software</div>
             <h3>Web & Internal Tools</h3>
             <p>Professional websites, admin panels, databases, and backend systems built for real workflows.</p>
             <div class="mini-list"><span class="tag">frontend</span><span class="tag">backend</span><span class="tag">databases</span></div>
@@ -429,44 +620,31 @@
           <h2>Selected work</h2>
           <p>Portfolio systems across web development, AI tools, data workflows, automation, robotics, and media infrastructure.</p>
         </div>
-
         <div class="grid-3">
-          <article class="card project-card">
-            <div><div class="icon">🛒</div><h3>DormSwap</h3><p>Campus marketplace with authentication, listings, messaging, and feedback.</p></div>
-            <div class="mini-list"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">Postgres</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">⚽</div><h3>Agent Crimson</h3><p>Football AI agent for predictions, fantasy support, memory, and RAG.</p></div>
-            <div class="mini-list"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">RAG</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🎥</div><h3>Crimson Webapp</h3><p>Creator workflow system for turning trends into recording-ready topic cards.</p></div>
-            <div class="mini-list"><span class="tag">content systems</span><span class="tag">automation</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">字幕</div><h3>SnapCaption</h3><p>Caption and transcript pipeline for faster short-form video production.</p></div>
-            <div class="mini-list"><span class="tag">Python</span><span class="tag">captions</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🕵️</div><h3>Fraud Analytics</h3><p>ETL validation, risk scoring, visual analysis, and executive reporting.</p></div>
-            <div class="mini-list"><span class="tag">data</span><span class="tag">analytics</span><span class="tag">risk</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🖐️</div><h3>Robotic Hand</h3><p>Tendon-driven humanoid hand project based on Yale OpenHand concepts.</p></div>
-            <div class="mini-list"><span class="tag">robotics</span><span class="tag">systems</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🖥️</div><h3>Simple Elite</h3><p>Desktop workspace combining ChatGPT, an assistant panel, and terminal.</p></div>
-            <div class="mini-list"><span class="tag">Electron</span><span class="tag">desktop</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🎙️</div><h3>Synth Engine</h3><p>Privacy-first voice and audio experimentation studio for Apple Silicon.</p></div>
-            <div class="mini-list"><span class="tag">audio</span><span class="tag">AI</span></div>
-          </article>
-          <article class="card project-card">
-            <div><div class="icon">🧰</div><h3>OpenOps Backend</h3><p>FastAPI backend with authentication, CRUD, and modular architecture.</p></div>
-            <div class="mini-list"><span class="tag">FastAPI</span><span class="tag">JWT</span></div>
-          </article>
+          <article class="card project-card"><div><div class="project-code">DS</div><h3>DormSwap</h3><p>Campus marketplace with authentication, listings, messaging, and feedback.</p></div><div class="mini-list"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">Postgres</span></div></article>
+          <article class="card project-card"><div><div class="project-code">AC</div><h3>Agent Crimson</h3><p>Football AI agent for predictions, fantasy support, memory, and RAG.</p></div><div class="mini-list"><span class="tag">Python</span><span class="tag">AI agents</span><span class="tag">RAG</span></div></article>
+          <article class="card project-card"><div><div class="project-code">CW</div><h3>Crimson Webapp</h3><p>Creator workflow system for turning trends into recording-ready topic cards.</p></div><div class="mini-list"><span class="tag">content systems</span><span class="tag">automation</span></div></article>
+          <article class="card project-card"><div><div class="project-code">CC</div><h3>SnapCaption</h3><p>Caption and transcript pipeline for faster short-form video production.</p></div><div class="mini-list"><span class="tag">Python</span><span class="tag">captions</span></div></article>
+          <article class="card project-card"><div><div class="project-code">FA</div><h3>Fraud Analytics</h3><p>ETL validation, risk scoring, visual analysis, and executive reporting.</p></div><div class="mini-list"><span class="tag">data</span><span class="tag">analytics</span><span class="tag">risk</span></div></article>
+          <article class="card project-card"><div><div class="project-code">RH</div><h3>Robotic Hand</h3><p>Tendon-driven humanoid hand project based on Yale OpenHand concepts.</p></div><div class="mini-list"><span class="tag">robotics</span><span class="tag">systems</span></div></article>
+          <article class="card project-card"><div><div class="project-code">SE</div><h3>Simple Elite</h3><p>Desktop workspace combining ChatGPT, an assistant panel, and terminal.</p></div><div class="mini-list"><span class="tag">Electron</span><span class="tag">desktop</span></div></article>
+          <article class="card project-card"><div><div class="project-code">SY</div><h3>Synth Engine</h3><p>Privacy-first voice and audio experimentation studio for Apple Silicon.</p></div><div class="mini-list"><span class="tag">audio</span><span class="tag">AI</span></div></article>
+          <article class="card project-card"><div><div class="project-code">OP</div><h3>OpenOps Backend</h3><p>FastAPI backend with authentication, CRUD, and modular architecture.</p></div><div class="mini-list"><span class="tag">FastAPI</span><span class="tag">JWT</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>How projects work</h2>
+          <p>A simple path from first conversation to working system, built to keep expectations clear.</p>
+        </div>
+        <div class="process">
+          <article class="process-card"><span class="num">1</span><h3>Intro</h3><p>We define the problem, audience, workflow, and goal.</p></article>
+          <article class="process-card"><span class="num">2</span><h3>Plan</h3><p>You get a clear scope, timeline, and project price.</p></article>
+          <article class="process-card"><span class="num">3</span><h3>Build</h3><p>I create the first working preview and collect feedback.</p></article>
+          <article class="process-card"><span class="num">4</span><h3>Launch</h3><p>We polish, deliver, document, and support the system.</p></article>
         </div>
       </div>
     </section>
@@ -477,42 +655,21 @@
           <h2>Experience & resume</h2>
           <p>Background in software systems, databases, documentation, operations, and technical support.</p>
         </div>
-
         <div class="grid-2">
-          <article class="resume-card">
-            <h3>Technical Officer</h3>
-            <div class="meta">Ministry of Finance, Planning and Economic Development</div>
-            <p>Supported digital systems, workflow optimization, EDMS rollout, staff training, and technical documentation for operational teams.</p>
-            <div class="mini-list"><span class="tag">systems support</span><span class="tag">documentation</span><span class="tag">process improvement</span></div>
-          </article>
-          <article class="resume-card">
-            <h3>IT Intern</h3>
-            <div class="meta">Kampala Capital City Authority</div>
-            <p>Worked with databases, SQL analysis, reporting support, and data integrity tasks for public-sector information systems.</p>
-            <div class="mini-list"><span class="tag">SQL</span><span class="tag">data analysis</span><span class="tag">reporting</span></div>
-          </article>
-          <article class="resume-card">
-            <h3>M.S. Computer Science</h3>
-            <div class="meta">University of the Pacific</div>
-            <p>Graduate-level training with project work across full-stack development, data systems, security, robotics, and AI tools.</p>
-            <div class="mini-list"><span class="tag">software engineering</span><span class="tag">data</span><span class="tag">security</span></div>
-          </article>
-          <article class="resume-card">
-            <h3>Resume</h3>
-            <div class="meta">Professional summary</div>
-            <p>AI systems builder focused on automation, data pipelines, web applications, and practical software for real-world workflows.</p>
-            <div class="actions"><a class="btn" href="mailto:a_odora@u.pacific.edu?subject=Request%20for%20Allan%20Odora%20Resume">Request resume</a></div>
-          </article>
+          <article class="resume-card"><h3>Technical Officer</h3><div class="meta">Ministry of Finance, Planning and Economic Development</div><p>Supported digital systems, workflow optimization, EDMS rollout, staff training, and technical documentation for operational teams.</p><div class="mini-list"><span class="tag">systems support</span><span class="tag">documentation</span><span class="tag">process improvement</span></div></article>
+          <article class="resume-card"><h3>IT Intern</h3><div class="meta">Kampala Capital City Authority</div><p>Worked with databases, SQL analysis, reporting support, and data integrity tasks for public-sector information systems.</p><div class="mini-list"><span class="tag">SQL</span><span class="tag">data analysis</span><span class="tag">reporting</span></div></article>
+          <article class="resume-card"><h3>M.S. Computer Science</h3><div class="meta">University of the Pacific</div><p>Graduate-level training with project work across full-stack development, data systems, security, robotics, and AI tools.</p><div class="mini-list"><span class="tag">software engineering</span><span class="tag">data</span><span class="tag">security</span></div></article>
+          <article class="resume-card"><h3>Resume</h3><div class="meta">Professional summary</div><p>Systems builder focused on automation, data pipelines, web applications, and practical software for real-world workflows.</p><div class="actions"><a class="btn" href="mailto:a_odora@u.pacific.edu?subject=Request%20for%20Allan%20Odora%20Resume">Request resume</a></div></article>
         </div>
       </div>
     </section>
 
-    <section id="podcast">
+    <section id="media-lab">
       <div class="container">
-        <div class="podcast-box">
-          <div class="podcast-mark"><strong>The Crimson Chin Post</strong></div>
+        <div class="media-box">
+          <div class="media-mark"><strong>The Crimson Chin Post</strong></div>
           <div>
-            <div class="pill">football media • creator workflow systems</div>
+            <div class="eyebrow">football media • creator systems</div>
             <h2>Media lab for creator technology</h2>
             <p>The Crimson Chin Post is my football media lab. It connects to my technical work through trend research tools, caption pipelines, recording prep workflows, sports-content automation, and creator systems.</p>
             <div class="mini-list"><span class="tag">football media</span><span class="tag">content workflows</span><span class="tag">creator automation</span><span class="tag">sports AI</span></div>
@@ -528,7 +685,7 @@
           <h2>Technical toolbox</h2>
           <p>The stack I use to move ideas from rough concept to working product.</p>
         </div>
-        <div class="strip">
+        <div class="tool-strip">
           <div>Python</div><div>JavaScript</div><div>React</div><div>Spring Boot</div><div>PostgreSQL</div>
           <div>FastAPI</div><div>Docker</div><div>Tableau</div><div>GitHub</div><div>AI Tools</div>
         </div>
@@ -544,8 +701,8 @@
           </div>
           <div>
             <div class="mini-list">
-              <span class="tag">AI systems</span><span class="tag">business tools</span><span class="tag">creator workflows</span>
-              <span class="tag">dashboards</span><span class="tag">automation</span><span class="tag">full-stack apps</span>
+              <span class="tag">business tools</span><span class="tag">creator workflows</span><span class="tag">dashboards</span>
+              <span class="tag">automation</span><span class="tag">full-stack apps</span><span class="tag">technical consulting</span>
             </div>
           </div>
         </div>
@@ -556,7 +713,7 @@
       <div class="container">
         <div class="contact">
           <div>
-            <h2>Let’s build the system properly.</h2>
+            <h2>Bring the problem. We’ll build the system.</h2>
             <p>Send a short note about the workflow, website, dashboard, automation, or internal tool you want to build.</p>
             <div class="actions">
               <a class="btn btn-primary" href="mailto:a_odora@u.pacific.edu?subject=Project%20Inquiry%20for%20Allan%20Odora%20Systems">Email Allan</a>
@@ -566,7 +723,7 @@
           </div>
           <div class="contact-card">
             <h3>Best fit</h3>
-            <p>Automation, dashboards, business websites, internal tools, content systems, and custom AI workflows.</p>
+            <p>Business websites, dashboards, automation systems, internal tools, content systems, and technical consulting.</p>
           </div>
         </div>
       </div>
@@ -576,7 +733,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© 2026 Allan Odora Systems</span>
-      <span>AI automation • data systems • web solutions</span>
+      <span>web systems • data tools • workflow automation</span>
     </div>
   </footer>
 </body>
