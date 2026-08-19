@@ -7,20 +7,16 @@
   <title>Allan Odora Systems | Web, Data & Automation Systems</title>
   <style>
     :root {
-      --paper: #fbf6ea;
-      --paper-2: #f3ead8;
+      --paper: #fbf5e8;
       --cream: #fffaf1;
       --ink: #20251f;
       --forest: #28483c;
-      --moss: #637c5f;
-      --olive: #9aa77b;
+      --moss: #667d61;
       --clay: #b46f48;
-      --copper: #d4a36f;
-      --mist: #dce8e1;
-      --sky: #b7ddd7;
+      --gold: #d7aa70;
+      --mint: #dbe9e2;
       --muted: #6c7269;
       --line: rgba(32, 37, 31, 0.13);
-      --line-strong: rgba(32, 37, 31, 0.22);
       --shadow: 0 22px 55px rgba(70, 54, 32, 0.12);
       --soft-shadow: 0 12px 28px rgba(70, 54, 32, 0.08);
       --radius: 24px;
@@ -28,13 +24,14 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 12% 4%, rgba(183, 221, 215, 0.44), transparent 25%),
-        radial-gradient(circle at 88% 12%, rgba(212, 163, 111, 0.28), transparent 26%),
-        linear-gradient(180deg, var(--paper), var(--paper-2) 48%, #eef2e7 100%);
+        radial-gradient(circle at 9% 6%, rgba(183, 221, 215, 0.44), transparent 25%),
+        radial-gradient(circle at 91% 9%, rgba(215, 170, 112, 0.26), transparent 26%),
+        linear-gradient(180deg, var(--paper), #f4ead7 48%, #edf2e7 100%);
       line-height: 1.55;
     }
 
@@ -45,7 +42,7 @@
       position: sticky;
       top: 0;
       z-index: 40;
-      background: rgba(251, 246, 234, 0.78);
+      background: rgba(251, 245, 232, 0.82);
       backdrop-filter: blur(22px);
       border-bottom: 1px solid var(--line);
     }
@@ -90,18 +87,14 @@
       font-size: 0.92rem;
     }
 
-    .nav-links a {
-      padding: 8px 11px;
-      border-radius: 999px;
-    }
-
+    .nav-links a { padding: 8px 11px; border-radius: 999px; }
     .nav-links a:hover { background: rgba(255, 250, 241, 0.78); color: var(--ink); }
 
-    .hero { padding: 76px 0 38px; }
+    .hero { padding: 76px 0 42px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.06fr 0.94fr;
-      gap: 34px;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 38px;
       align-items: center;
     }
 
@@ -113,7 +106,7 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       color: var(--forest);
-      background: rgba(255, 250, 241, 0.7);
+      background: rgba(255, 250, 241, 0.76);
       font-weight: 820;
       font-size: 0.88rem;
       box-shadow: var(--soft-shadow);
@@ -131,7 +124,7 @@
 
     h1 {
       max-width: 870px;
-      font-size: clamp(2.7rem, 6.1vw, 5.2rem);
+      font-size: clamp(2.7rem, 6.1vw, 5.15rem);
       line-height: 0.98;
       letter-spacing: -0.075em;
       margin-bottom: 20px;
@@ -151,11 +144,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       padding: 0 18px;
       border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: rgba(255, 250, 241, 0.76);
+      border: 1px solid rgba(32, 37, 31, 0.22);
+      background: rgba(255, 250, 241, 0.78);
       font-weight: 830;
       transition: 0.18s ease;
     }
@@ -163,65 +155,47 @@
     .btn:hover { transform: translateY(-2px); box-shadow: var(--soft-shadow); }
     .btn-primary { background: var(--ink); color: var(--cream); border-color: var(--ink); }
 
-    .studio-panel {
-      min-height: 448px;
+    .welcome-card {
       border-radius: 34px;
-      padding: 18px;
-      border: 1px solid rgba(255,255,255,0.78);
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.84);
       background:
-        linear-gradient(145deg, rgba(255,250,241,0.88), rgba(220,232,225,0.74)),
-        linear-gradient(90deg, rgba(40,72,60,0.08), rgba(180,111,72,0.08));
+        linear-gradient(145deg, rgba(255,250,241,0.9), rgba(219,233,226,0.72)),
+        linear-gradient(90deg, rgba(40,72,60,0.06), rgba(180,111,72,0.06));
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
     }
 
-    .studio-panel:before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border-radius: 26px;
-      border: 1px solid rgba(32,37,31,0.08);
-      pointer-events: none;
-    }
-
-    .system-board {
-      height: 100%;
-      min-height: 412px;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .board-top, .board-bottom {
+    .welcome-head {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 12px;
-      align-items: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 18px;
     }
 
-    .board-title {
-      font-weight: 860;
+    .welcome-head h2 {
+      font-size: 1.35rem;
       letter-spacing: -0.05em;
-      font-size: 1.15rem;
+      line-height: 1;
     }
 
-    .status {
+    .open-pill {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 7px 10px;
+      gap: 8px;
       border-radius: 999px;
-      background: rgba(255,250,241,0.72);
+      padding: 8px 11px;
+      background: rgba(255,250,241,0.76);
       border: 1px solid var(--line);
       color: var(--forest);
-      font-size: 0.78rem;
-      font-weight: 820;
+      font-size: 0.8rem;
+      font-weight: 830;
+      white-space: nowrap;
     }
 
-    .status:before {
+    .open-pill:before {
       content: "";
       width: 7px;
       height: 7px;
@@ -229,90 +203,58 @@
       background: var(--moss);
     }
 
-    .board-main {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 14px;
-    }
-
-    .stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .module {
-      border-radius: 22px;
-      padding: 16px;
-      border: 1px solid rgba(32,37,31,0.1);
-      background: rgba(255,250,241,0.72);
-      box-shadow: var(--soft-shadow);
-    }
-
-    .module.dark {
-      background: linear-gradient(135deg, var(--forest), #22352e);
+    .big-statement {
+      border-radius: 26px;
+      background: linear-gradient(135deg, var(--forest), #21362e);
       color: var(--cream);
+      padding: 24px;
+      margin-bottom: 14px;
     }
 
-    .module small {
+    .big-statement small {
       display: block;
-      color: inherit;
-      opacity: 0.68;
-      font-weight: 780;
-      letter-spacing: 0.08em;
+      opacity: 0.72;
       text-transform: uppercase;
-      font-size: 0.68rem;
-      margin-bottom: 6px;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+      font-size: 0.72rem;
+      margin-bottom: 10px;
     }
 
-    .module strong {
+    .big-statement strong {
       display: block;
-      font-size: 1.05rem;
-      letter-spacing: -0.035em;
-      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
     }
 
-    .module p { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
-    .module.dark p { color: rgba(255,250,241,0.72); }
-
-    .flow-line {
-      min-height: 100%;
-      border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(255,250,241,0.82), rgba(255,250,241,0.42)),
-        repeating-linear-gradient(135deg, rgba(40,72,60,0.08) 0, rgba(40,72,60,0.08) 1px, transparent 1px, transparent 12px);
-      border: 1px solid rgba(32,37,31,0.1);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .step {
+    .service-list {
       display: grid;
-      grid-template-columns: 34px 1fr;
       gap: 10px;
-      align-items: start;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(32,37,31,0.09);
+      margin-top: 14px;
     }
 
-    .step:last-child { border-bottom: 0; }
-    .num {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      background: var(--ink);
-      color: var(--cream);
-      font-weight: 860;
-      font-size: 0.84rem;
+    .service-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: rgba(255,250,241,0.74);
+      border: 1px solid rgba(32,37,31,0.09);
+      box-shadow: 0 8px 18px rgba(70, 54, 32, 0.055);
     }
 
-    .step strong { display: block; letter-spacing: -0.035em; }
-    .step span { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+    .service-row strong { letter-spacing: -0.035em; }
+    .service-row span { color: var(--muted); font-weight: 700; font-size: 0.9rem; }
 
-    .board-bottom { color: var(--muted); font-size: 0.86rem; font-weight: 700; }
+    .welcome-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 720;
+      font-size: 0.95rem;
+    }
 
     section { padding: 54px 0; }
     .section-head {
@@ -335,7 +277,7 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
-    .card {
+    .card, .resume-card, .process-card {
       background: rgba(255, 250, 241, 0.78);
       border: 1px solid rgba(255,255,255,0.88);
       border-radius: var(--radius);
@@ -353,14 +295,14 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--forest), var(--olive), var(--clay));
-      opacity: 0.68;
+      background: linear-gradient(90deg, var(--forest), var(--moss), var(--clay));
+      opacity: 0.62;
     }
 
     .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .kicker { color: var(--clay); font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 860; margin-bottom: 10px; }
-    .card h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -0.035em; }
-    .card p { color: var(--muted); font-size: 0.96rem; }
+    .card h3, .resume-card h3, .process-card h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -0.035em; }
+    .card p, .resume-card p, .process-card p { color: var(--muted); font-size: 0.96rem; }
 
     .mini-list { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 7px; }
     .tag {
@@ -390,34 +332,21 @@
       letter-spacing: -0.06em;
     }
 
-    .process {
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      place-items: center;
+      background: var(--ink);
+      color: var(--cream);
+      font-weight: 860;
+      font-size: 0.84rem;
+      margin-bottom: 14px;
     }
 
-    .process-card {
-      border-radius: var(--radius);
-      padding: 19px;
-      background: rgba(255,250,241,0.68);
-      border: 1px solid rgba(255,255,255,0.86);
-      box-shadow: var(--soft-shadow);
-    }
-
-    .process-card .num { margin-bottom: 14px; }
-    .process-card h3 { letter-spacing: -0.035em; margin-bottom: 6px; }
-    .process-card p { color: var(--muted); font-size: 0.94rem; }
-
-    .resume-card {
-      background: rgba(255, 250, 241, 0.78);
-      border: 1px solid rgba(255,255,255,0.88);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--soft-shadow);
-    }
-    .resume-card h3 { letter-spacing: -0.035em; margin-bottom: 5px; }
     .resume-card .meta { color: var(--forest); font-weight: 850; font-size: 0.9rem; margin-bottom: 8px; }
-    .resume-card p { color: var(--muted); }
 
     .media-box {
       background:
@@ -453,11 +382,7 @@
     .media-box .tag { background: rgba(255,250,241,0.1); color: var(--cream); border-color: rgba(255,250,241,0.12); }
     .media-box .btn-primary { background: var(--cream); color: var(--ink); border-color: var(--cream); }
 
-    .tool-strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
+    .tool-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
     .tool-strip div {
       border-radius: 20px;
       padding: 16px;
@@ -495,12 +420,7 @@
     }
     .contact h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1; letter-spacing: -0.065em; margin-bottom: 10px; }
     .contact p { color: var(--muted); }
-    .contact-card {
-      background: linear-gradient(145deg, rgba(220,232,225,0.78), rgba(255,250,241,0.9));
-      border-radius: 26px;
-      padding: 20px;
-      border: 1px solid rgba(32, 37, 31, 0.08);
-    }
+    .contact-card { background: linear-gradient(145deg, rgba(219,233,226,0.78), rgba(255,250,241,0.9)); border-radius: 26px; padding: 20px; border: 1px solid rgba(32, 37, 31, 0.08); }
 
     footer { padding: 26px 0 38px; color: var(--muted); }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -509,10 +429,8 @@
       .hero-grid, .grid-3, .grid-2, .media-box, .about-box, .contact { grid-template-columns: 1fr; }
       .process { grid-template-columns: repeat(2, 1fr); }
       .tool-strip { grid-template-columns: repeat(2, 1fr); }
-      .board-main { grid-template-columns: 1fr; }
       .nav-inner { align-items: flex-start; flex-direction: column; padding: 15px 0; }
       .section-head { flex-direction: column; align-items: flex-start; }
-      .studio-panel { min-height: auto; }
     }
 
     @media (max-width: 540px) {
@@ -520,6 +438,8 @@
       .hero { padding-top: 54px; }
       .container { width: min(100% - 28px, 1120px); }
       h1 { font-size: clamp(2.4rem, 16vw, 3.8rem); }
+      .welcome-head { align-items: flex-start; flex-direction: column; }
+      .service-row { align-items: flex-start; flex-direction: column; gap: 4px; }
     }
   </style>
 </head>
@@ -551,36 +471,22 @@
           </div>
         </div>
 
-        <aside class="studio-panel" aria-label="Systems studio preview">
-          <div class="system-board">
-            <div class="board-top">
-              <span class="board-title">Systems Studio</span>
-              <span class="status">Taking projects</span>
-            </div>
-            <div class="board-main">
-              <div class="stack">
-                <div class="module dark">
-                  <small>Focus</small>
-                  <strong>Clear tools for messy workflows.</strong>
-                  <p>Build the thing people can actually use.</p>
-                </div>
-                <div class="module">
-                  <small>Best fit</small>
-                  <strong>Websites, dashboards, automations, internal tools.</strong>
-                </div>
-              </div>
-              <div class="flow-line">
-                <div class="step"><span class="num">1</span><div><strong>Listen</strong><span>Understand the real problem.</span></div></div>
-                <div class="step"><span class="num">2</span><div><strong>Design</strong><span>Map the workflow before building.</span></div></div>
-                <div class="step"><span class="num">3</span><div><strong>Build</strong><span>Deliver a working system.</span></div></div>
-                <div class="step"><span class="num">4</span><div><strong>Improve</strong><span>Support, polish, and maintain.</span></div></div>
-              </div>
-            </div>
-            <div class="board-bottom">
-              <span>Professional enough for serious teams.</span>
-              <span>Welcoming enough for first-time clients.</span>
-            </div>
+        <aside class="welcome-card" aria-label="What Allan Odora Systems builds">
+          <div class="welcome-head">
+            <h2>What we build</h2>
+            <span class="open-pill">Taking projects</span>
           </div>
+          <div class="big-statement">
+            <small>Studio promise</small>
+            <strong>Bring the problem. We’ll build the system.</strong>
+          </div>
+          <div class="service-list">
+            <div class="service-row"><strong>Business websites</strong><span>clear, fast, public-facing</span></div>
+            <div class="service-row"><strong>Dashboards</strong><span>data cleaned and visible</span></div>
+            <div class="service-row"><strong>Automations</strong><span>less repetitive work</span></div>
+            <div class="service-row"><strong>Internal tools</strong><span>systems your team can use</span></div>
+          </div>
+          <p class="welcome-note">Professional enough for serious teams. Welcoming enough for first-time clients.</p>
         </aside>
       </div>
     </section>
@@ -592,24 +498,9 @@
           <p>Technical delivery for businesses, creators, and teams that need organized systems, not vague tech hype.</p>
         </div>
         <div class="grid-3">
-          <article class="card">
-            <div class="kicker">Workflow</div>
-            <h3>Automation Systems</h3>
-            <p>Tools that reduce manual work, improve intake, and keep operations organized.</p>
-            <div class="mini-list"><span class="tag">AI workflows</span><span class="tag">intake tools</span><span class="tag">process design</span></div>
-          </article>
-          <article class="card">
-            <div class="kicker">Information</div>
-            <h3>Data & Dashboards</h3>
-            <p>Data cleanup, reporting pipelines, and dashboards that make business information easier to use.</p>
-            <div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">analytics</span></div>
-          </article>
-          <article class="card">
-            <div class="kicker">Software</div>
-            <h3>Web & Internal Tools</h3>
-            <p>Professional websites, admin panels, databases, and backend systems built for real workflows.</p>
-            <div class="mini-list"><span class="tag">frontend</span><span class="tag">backend</span><span class="tag">databases</span></div>
-          </article>
+          <article class="card"><div class="kicker">Workflow</div><h3>Automation Systems</h3><p>Tools that reduce manual work, improve intake, and keep operations organized.</p><div class="mini-list"><span class="tag">AI workflows</span><span class="tag">intake tools</span><span class="tag">process design</span></div></article>
+          <article class="card"><div class="kicker">Information</div><h3>Data & Dashboards</h3><p>Data cleanup, reporting pipelines, and dashboards that make business information easier to use.</p><div class="mini-list"><span class="tag">ETL</span><span class="tag">reports</span><span class="tag">analytics</span></div></article>
+          <article class="card"><div class="kicker">Software</div><h3>Web & Internal Tools</h3><p>Professional websites, admin panels, databases, and backend systems built for real workflows.</p><div class="mini-list"><span class="tag">frontend</span><span class="tag">backend</span><span class="tag">databases</span></div></article>
         </div>
       </div>
     </section>
@@ -636,10 +527,7 @@
 
     <section id="process">
       <div class="container">
-        <div class="section-head">
-          <h2>How projects work</h2>
-          <p>A simple path from first conversation to working system, built to keep expectations clear.</p>
-        </div>
+        <div class="section-head"><h2>How projects work</h2><p>A simple path from first conversation to working system, built to keep expectations clear.</p></div>
         <div class="process">
           <article class="process-card"><span class="num">1</span><h3>Intro</h3><p>We define the problem, audience, workflow, and goal.</p></article>
           <article class="process-card"><span class="num">2</span><h3>Plan</h3><p>You get a clear scope, timeline, and project price.</p></article>
@@ -651,10 +539,7 @@
 
     <section id="experience">
       <div class="container">
-        <div class="section-head">
-          <h2>Experience & resume</h2>
-          <p>Background in software systems, databases, documentation, operations, and technical support.</p>
-        </div>
+        <div class="section-head"><h2>Experience & resume</h2><p>Background in software systems, databases, documentation, operations, and technical support.</p></div>
         <div class="grid-2">
           <article class="resume-card"><h3>Technical Officer</h3><div class="meta">Ministry of Finance, Planning and Economic Development</div><p>Supported digital systems, workflow optimization, EDMS rollout, staff training, and technical documentation for operational teams.</p><div class="mini-list"><span class="tag">systems support</span><span class="tag">documentation</span><span class="tag">process improvement</span></div></article>
           <article class="resume-card"><h3>IT Intern</h3><div class="meta">Kampala Capital City Authority</div><p>Worked with databases, SQL analysis, reporting support, and data integrity tasks for public-sector information systems.</p><div class="mini-list"><span class="tag">SQL</span><span class="tag">data analysis</span><span class="tag">reporting</span></div></article>
@@ -681,30 +566,16 @@
 
     <section id="tools">
       <div class="container">
-        <div class="section-head">
-          <h2>Technical toolbox</h2>
-          <p>The stack I use to move ideas from rough concept to working product.</p>
-        </div>
-        <div class="tool-strip">
-          <div>Python</div><div>JavaScript</div><div>React</div><div>Spring Boot</div><div>PostgreSQL</div>
-          <div>FastAPI</div><div>Docker</div><div>Tableau</div><div>GitHub</div><div>AI Tools</div>
-        </div>
+        <div class="section-head"><h2>Technical toolbox</h2><p>The stack I use to move ideas from rough concept to working product.</p></div>
+        <div class="tool-strip"><div>Python</div><div>JavaScript</div><div>React</div><div>Spring Boot</div><div>PostgreSQL</div><div>FastAPI</div><div>Docker</div><div>Tableau</div><div>GitHub</div><div>AI Tools</div></div>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
         <div class="about-box">
-          <div>
-            <h2>Built by Allan Odora.</h2>
-            <p>M.S. Computer Science, University of the Pacific. I build practical software systems that are clear, useful, and connected to real operational needs.</p>
-          </div>
-          <div>
-            <div class="mini-list">
-              <span class="tag">business tools</span><span class="tag">creator workflows</span><span class="tag">dashboards</span>
-              <span class="tag">automation</span><span class="tag">full-stack apps</span><span class="tag">technical consulting</span>
-            </div>
-          </div>
+          <div><h2>Built by Allan Odora.</h2><p>M.S. Computer Science, University of the Pacific. I build practical software systems that are clear, useful, and connected to real operational needs.</p></div>
+          <div><div class="mini-list"><span class="tag">business tools</span><span class="tag">creator workflows</span><span class="tag">dashboards</span><span class="tag">automation</span><span class="tag">full-stack apps</span><span class="tag">technical consulting</span></div></div>
         </div>
       </div>
     </section>
@@ -721,10 +592,7 @@
               <a class="btn" href="https://www.linkedin.com/in/allan-rodney-odora" target="_blank" rel="noopener">LinkedIn</a>
             </div>
           </div>
-          <div class="contact-card">
-            <h3>Best fit</h3>
-            <p>Business websites, dashboards, automation systems, internal tools, content systems, and technical consulting.</p>
-          </div>
+          <div class="contact-card"><h3>Best fit</h3><p>Business websites, dashboards, automation systems, internal tools, content systems, and technical consulting.</p></div>
         </div>
       </div>
     </section>
